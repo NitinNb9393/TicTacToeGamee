@@ -11,7 +11,7 @@ public class TicTacToeGamee {
 		System.out.println("Welcome to the Tic Tac Toe Gamee");
 		boardCreation();
 		choosingXorO();
-
+		currentBoard();
 	}
 
 	public static void boardCreation() {
@@ -38,5 +38,22 @@ public class TicTacToeGamee {
 			System.out.println("Your input is invalid");
 			choosingXorO();
 		}
+	}
+
+	public static void currentBoard() {
+		for (int i = 1; i < 10; i++) {
+			if (element[i] != 'X' && element[i] != 'O') {
+				element[i] = (char) (i + '0');
+			}
+		}
+		displayingBoard();
+	}
+
+	public static void displayingBoard() {
+		System.out.println("\n  " + element[1] + " | " + element[2] + " | " + element[3] + " ");
+		System.out.println(" ----------- ");
+		System.out.println("  " + element[4] + " | " + element[5] + " | " + element[6] + " ");
+		System.out.println(" ----------- ");
+		System.out.println("  " + element[7] + " | " + element[8] + " | " + element[9] + " \n");
 	}
 }
